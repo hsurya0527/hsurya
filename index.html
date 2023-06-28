@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Haripriya Suryadevara</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+        <script> src='page.js' </script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                // Get all the <li> elements
+                const listItems = document.querySelectorAll('li');
+    
+                // Add click event listener to each <li> element
+                listItems.forEach((item) => {
+                    item.addEventListener('click', (event) => {
+                        // Remove the 'active' class from all <li> elements
+                        listItems.forEach((li) => {
+                            li.classList.remove('active');
+                        });
+    
+                        // Add the 'active' class to the clicked <li> element
+                        event.currentTarget.classList.add('active');
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="header">
+                <h1>Haripriya Suryadevara</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="body">
+                <p>Welcome.</p>
+                <h1 id="welcome_mes" class="welcome">I am <span class="element"></span></h1>
+                <script>
+                    var typed = new Typed('.element', {
+                        strings: ["Haripriya.", "an engineer.", "hardworking.", "always learning.", 
+                                  "a team player.", "creative.", "openminded.", "an avid reader.",
+                                  "multiskilled.", "ambitious.", "dependable.", "compassionate.", 
+                                  "a pet lover.", "enthusiastic."],
+                        typeSpeed: 50,
+                        backSpeed: 50,
+                        loop: true,
+                    });
+                </script>
+                <!-- <div class="education"> -->
+                <h2 id="education">Education</h2>
+                <!-- </div> -->
+            </div>
+            
+        </div>
+    </body>
+</html>
